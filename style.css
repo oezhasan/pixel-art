@@ -1,18 +1,28 @@
 *{
   margin:0;
   padding:0;
+  font-size: 20px;
+  color: white;
+  font-family: 'VT323', monospace;
+
+  
+}
+
+body{
+  background-color:black;
 }
 
 .main{
   display:flex;
   flex-direction: row;
+  
 }
 
 h1{
   text-align: center;
-  color: red;
   margin: 30px;
 }
+
 
 #size-value{
   display: inline-block;
@@ -25,29 +35,69 @@ h1{
 
 .settings-container-left{
   width: 200px;
-  border: 1px solid red;
   flex: 1 1 auto;
+  text-align: center;
+  border: 1px solid red;
+  display: block;  
+}
+
+.button-active{
+  background-color: thistle;
+}
+
+.settings-container-left *  {
+  margin: 0 auto;
+  width: 50%;
+  margin-top: 20px;
+  padding: 5px;
+}
+
+button {
+  background-color: black;
+  border: 3px solid white;
+  color: white;
+  text-decoration: none;
+  border-radius: 15px;
+}
+
+#clear{
+  bottom: 0;
 }
 
 .size-setting{
-  border: 1px solid red;
   text-align: center;
+  border: 3px solid white;
+  border-radius: 15px;
+
 }
+
+
 
 .settings-container-right{
   width: 200px;
-  border: 1px solid red;
   flex: 1 1 auto;
 }
+
+/* ---------------PIXEL BOARD----------------- */
 
 .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    background-color: #2196F3;
     padding: 10px;
     margin: 0 10px;
     width: 500px;
     flex: 1 1 auto;
+
+    background-color:white;
+  border:solid 5vmin #eee;
+  border-bottom-color:#fff;
+  border-left-color:#eee;
+  border-radius:2px;
+  border-right-color:#eee;
+  border-top-color:#ddd;
+  box-shadow:0 0 5px 0 rgba(0,0,0,.25) inset, 0 5px 10px 5px rgba(0,0,0,.25);
+  box-sizing:border-box;
+  
 
 }
 
