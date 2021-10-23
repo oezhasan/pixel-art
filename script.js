@@ -2,6 +2,7 @@ const grid = document.querySelector(".grid-container");
 const sizeSlider = document.querySelector("#size-slider");
 const sizeValue = document.querySelector("#size-value");
 const colorPicker = document.querySelector("#color-picker");
+const imgName = document.querySelector("#img-name");
 let selectedColor = colorPicker.value
 let mode = 'color';
 let gridItems;
@@ -59,7 +60,23 @@ function changeMode(mode){
         gridItems.forEach(item => item.style.backgroundColor = 'white' );
     }
 }
+function getScreenShot(){
 
+    html2canvas(document.querySelector("#pixelart")).then(canvas => {
+        var img = canvas.toDataURL();
+        
+        saveBase64AsFile(img, imgName.value)
+    });
+}
+
+function saveBase64AsFile(base64, fileName) {
+    var link = document.createElement("a");
+
+
+    link.setAttribute("href", base64);
+    link.setAttribute("download", fileName);
+    link.click();
+}
 
 function create_grid(x){
 
